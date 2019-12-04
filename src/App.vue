@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <v-header />
+    <v-header :seller="seller" />
     <div class="tab border-1px">
       <div class="tab-item">
         <router-link to='/goods'>商品</router-link>
@@ -17,15 +17,25 @@
 </template>
 <script>
 import VHeader from '@/components/header/header';
+import getData from '@/api/header.js'
 
 export default {
+  data(){
+    return {
+      seller:{}
+    }
+  },
+  async created(){
+    this.seller = await getData('/api/seller');
+    console.log(this.seller)
+  },
   components:{
     VHeader
   }
 }
 </script>
 <style lang="scss">
-@import "./sass/mixin.scss";
+@import "./common/sass/mixin.scss";
 .tab{
   display: flex;
   .tab-item {

@@ -1,5 +1,5 @@
 <template>
-    <div>ratings</div>
+    <div></div>
 </template>
 <script>
 export default {
