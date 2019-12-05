@@ -5,6 +5,25 @@ html, body {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+// .cleatfix:after {
+//     display: block;
+//     content: ' ';
+//     width: 0;
+//     height: 0;
+//     overflow: hidden;
+//     clear: both;
+// }
+// .clearfix:after {
+//     zoom: 1;
+// }
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: " ";
+}
+.clearfix:after {
+    clear: both;
+}
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
     .border-1px {
         &::after {

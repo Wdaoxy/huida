@@ -27,7 +27,7 @@ export default {
   },
   async created(){
     this.seller = await getData('/api/seller');
-    console.log(this.seller)
+    // console.log(this.seller)
   },
   components:{
     VHeader
